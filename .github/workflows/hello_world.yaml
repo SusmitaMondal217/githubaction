@@ -2,7 +2,7 @@
   on: #when will it trigger
         push: #On push it will trigger
           branches: #Which branch will it trigger
-          - main: #On main branch it will trigger
+            - main #On main branch it will trigger
       workflow_dispatch: 
       jobs: ##works to be done
         build_and_test: #pipeline to be complete
