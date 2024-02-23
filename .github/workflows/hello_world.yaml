@@ -12,7 +12,7 @@ jobs: ##works to be done
         uses: actions/checkout@v2 #what it dose
       - name: Compile Java File #Name of the steps
         shell: bash #What shell to use
-        run: java Main.java #what it dose
+        run: javac Main.java #what it dose
       - name: Rub The Java File #Name of the steps
         shell: bash #What shell to use
         run: java Main #what it dose
