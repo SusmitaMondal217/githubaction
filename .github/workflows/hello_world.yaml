@@ -1,18 +1,18 @@
-  name: Hello World
-  on: #when will it trigger
-        push: #On push it will trigger
-          branches: #Which branch will it trigger
-            - main #On main branch it will trigger
-      workflow_dispatch: 
-      jobs: ##works to be done
-        build_and_test: #pipeline to be complete
-          runs-on: ubuntu-20.04 #server to be run on 
-          steps: #steps to go through
-            - name:  Clone Code #Name of the steps
-              uses: actions/checkout@v2 #what it dose
-            - name: Compile Java File #Name of the steps
-              shell: bash #What shell to use
-              run: java Main.java #what it dose
-            - name: Rub The Java File #Name of the steps
-              shell: bash #What shell to use
-              run: java Main #what it dose
+name: Hello World
+on: #when will it trigger
+  push: #On push it will trigger
+    branches: #Which branch will it trigger
+      - main #On main branch it will trigger
+  workflow_dispatch: 
+jobs: ##works to be done
+  build_and_test: #pipeline to be complete
+    runs-on: ubuntu-20.04 #server to be run on 
+    steps: #steps to go through
+      - name:  Clone Code #Name of the steps
+        uses: actions/checkout@v2 #what it dose
+      - name: Compile Java File #Name of the steps
+        shell: bash #What shell to use
+        run: java Main.java #what it dose
+      - name: Rub The Java File #Name of the steps
+        shell: bash #What shell to use
+        run: java Main #what it dose
