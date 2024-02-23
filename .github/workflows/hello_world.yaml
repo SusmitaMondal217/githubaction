@@ -7,12 +7,12 @@ on: #when will it trigger
 jobs: ##works to be done
   build_and_test: #pipeline to be complete
     runs-on: ubuntu-20.04 #server to be run on 
-  steps: #steps to go through
-    -name:  Clone Code #Name 
-    uses: actions/checkout@v2
-    -name: Compile Java File
-    shell: bash
-    run: java Main.java
-    -name: Rub The Java File
-    shell: bash
-    run: java Main
+    steps: #steps to go through
+      - name:  Clone Code #Name 
+        uses: actions/checkout@v2
+      - name: Compile Java File
+        shell: bash
+        run: java Main.java
+      - name: Rub The Java File
+        shell: bash
+        run: java Main
